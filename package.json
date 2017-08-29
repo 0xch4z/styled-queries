@@ -1,0 +1,20 @@
+{
+  "name": "styled-queries",
+  "version": "0.0.0",
+  "description": "Media queries for the styled component age.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "media",
+    "queries",
+    "styled-components",
+    "react"
+  ],
+  "author": "Charles Kenney",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^2.1.2"
+  }
+}
