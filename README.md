@@ -1,10 +1,10 @@
-<h1 align="center"><img height="30" src="/assets/react.png">Styled Queries</h1>
+<h1 align="center"><img height="30" src="https://raw.githubusercontent.com/Charliekenney23/styled-queries/master/assets/react.png">Styled Queries</h1>
 <p align="center">
   A tool for use with <a href="https://github.com/styled-components/styled-components">styled-components</a>! Media queries for the component age.
 </p>
 
 <p align="center">
-  <img src="/assets/demo.gif">
+  <img src="https://raw.githubusercontent.com/Charliekenney23/styled-queries/master/assets/demo.gif">
 </p>
 
 <h2>What's the point? 🤷‍♂️</h2>
