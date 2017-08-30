@@ -59,7 +59,7 @@ const XxlOnlyBanner = styled`
 
 <h2>Default queries ㉿</h2>
 
-Styled Queries comes with some pretty useful breakpoints out of the box. Keep in mind, you can choose add your own and remove these (see the [configuraing](#configuring-) section for more details).
+Styled Queries comes with some pretty useful breakpoints out of the box. Keep in mind, you can choose add your own and remove these (see the [configuring](#configuring-) section for more details).
 
 ```js
 const defaultBreakpoints = {
