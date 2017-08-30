@@ -1,4 +1,4 @@
-<h1 align="center"><img height="30" src="https://github.com/dannyfritz/web-tech-and-dev-emoji/blob/master/images/react.png?raw=true">Styled Queries</h1>
+<h1 align="center"><img height="30" src="/assets/react.png">Styled Queries</h1>
 <p align="center">
   A tool for use with <a href="https://github.com/styled-components/styled-components">styled-components</a>! Media queries for the component age.
 </p>
@@ -9,7 +9,7 @@
 
 <h2>What's the point? 🤷‍♂️</h2>
 
-This tool offers predefined breakpoints for easy bootstrapping, along with the ability to inject your own [configuration](#configuring) with a few lines of code. Theres also some really cool [query-helpers](#query-helpers) to help you target different break points (i.e. `mobileOnly`, `tabletOnly`, `desktopOnly`).
+This tool offers a simpler interface for writing out media queries in *styled* tagged templates. It comes with some simple [predifined breakpoints](#default-queries-), the ability to inject your own [configuration](#configuring-) and some convenient [query-helpers](#query-helpers-) to help you target specific breakpoints.
 
 <h2>Getting started 🚀</h2>
 First things first, install the npm package via the npm cli.
@@ -20,7 +20,9 @@ First things first, install the npm package via the npm cli.
 
 <h2>Usage 📝</h2>
 
-Using Style Queries with your React-Styled project is extremely easy. Simply, `import` the `styled-queries` package into your React component of choice and use interpolation inside of your Styled tagged template to access the media query break points. The default import is an object containing functions returning media query wrappers. 
+Using Style Queries with your React-Styled project is extremely easy. Simply, `import` the `styled-queries` package into your React component of choice and use interpolation inside of your *styled* tagged template to access the media query breakpoints via dot notation.
+
+The default import is an object containing functions returning media query wrappers. This is what you will be interfacing with to make media queries simpler.
 
 Here's an example:
 
@@ -44,9 +46,9 @@ export default () => (
   </Div>
 )
 ```
-<h2>Query Helpers ✅</h2>
+<h2>Query helpers ✅</h2>
 
-As you can see, the API provides `xOnly` query-helpers for all breakpoints automatically, even for ones you inject with your configuration. These are calculated dynamically by getting the difference of each breakpoint's respecitve width.
+As you can see, the API provides `[size]Only` query-helpers for all breakpoints automatically, even for ones you inject with your configuration. These are calculated dynamically by getting the difference of each breakpoint's respecitve width.
 
 ```js
 const XxlOnlyBanner = styled`
@@ -55,11 +57,31 @@ const XxlOnlyBanner = styled`
 `
 ```
 
+<h2>Default queries ㉿</h2>
+
+Styled Queries comes with some pretty useful breakpoints out of the box. Keep in mind, you can choose add your own and remove these (see the [configuraing](#configuring-) section for more details).
+
+```js
+const defaultBreakpoints = {
+  xs: 320,
+  sm: 768,
+  md: 1224,
+  lg: 1400,
+  xl: 1824,
+};
+```
+
 <h2>Configuring ⚒</h2>
 
-It's very easy to add your own configuration to your project. Simply import the `makeQueries` function from `styled-queries`.
+It's very easy to add your own configuration to your project. To get started with configuring your own breakpoints, import the `makeQueries` function from `styled-queries`. 
 
-**utils/media-queries.js**
+`makeQueries` takes two parameters:
+1. `{boolean}` Describes whether or not to inject default breakpoints. [Default: `true`] 
+2. `{object}` Describes a breakpoint and its min-width (where its width is an `{integer}`). [Default: `null`]
+
+To keep things neat, one might dedicate a file in the `utils` directory for exporting a custom config of Styled Queries globally throughout the project. Here's an example:
+
+**./utils/media-queries.js**
 
 ```js
 import { makeQueries } from 'styled-queries'
@@ -70,7 +92,7 @@ export default makeQueries(true, {
 })
 ```
 
-**pages/index.js**
+**./pages/index.js**
 
 ```js
 import media from '../utils/media-queries'
