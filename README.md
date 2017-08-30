@@ -53,7 +53,7 @@ As you can see, the API provides `[size]Only` query-helpers for all breakpoints 
 ```js
 const XxlOnlyBanner = styled`
   display: none;
-  ${media.xxl`display: block;`}
+  ${media.xxlOnly`display: block;`}
 `
 ```
 
