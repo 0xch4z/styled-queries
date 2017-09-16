@@ -29,7 +29,7 @@ Here's an example:
 ```js
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import media from 'styled-queries';
+import { media } from 'styled-queries';
 
 const Div = styled.div`
   color: #fff !important;
