@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+const { css } = require('styled-components');
 
 const defaultBreakpoints = {
   xs: 320,
@@ -8,7 +8,13 @@ const defaultBreakpoints = {
   xl: 1824,
 };
 
-export const makeQueries = (useDefaults = true, config) => {
+/**
+ * makeQueries
+ * 
+ * @param {boolean} useDefaults - Use default break points
+ * @param {config} config - custom configured queries object
+ */
+module.exports.makeQueries = (useDefaults = true, config) => {
   const queries = {};
   let sizes = [];
   const names = [];
@@ -45,4 +51,4 @@ export const makeQueries = (useDefaults = true, config) => {
   return queries;
 };
 
-export default makeQueries();
+module.exports.media = makeQueries();
