@@ -1,3 +1,6 @@
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Charliekenney23/styled-queries.svg)](https://greenkeeper.io/)
+
 <h1 align="center"><img height="30" src="https://raw.githubusercontent.com/Charliekenney23/styled-queries/master/assets/react.png">Styled Queries</h1>
 <p align="center">
   A tool for use with <a href="https://github.com/styled-components/styled-components">styled-components</a>! Media queries for the component age.
